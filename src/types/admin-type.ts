@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface PanelItemInterface {
+    id: string,
     title: string,
     icon: React.ReactNode | string,
     path?: string,
@@ -9,6 +10,8 @@ export interface PanelItemInterface {
 }
 
 export interface PanelSubItemInterface {
+    id: string,
     path: string,
     component: React.ReactNode,
+    title: string,
 }

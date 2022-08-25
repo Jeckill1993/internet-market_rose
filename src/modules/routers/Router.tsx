@@ -1,13 +1,15 @@
-import { RouteInterface } from "../types/router-types";
+import { RouteInterface } from "../../types/router-types";
 
-import MainPage from "../pages/MainPage";
-import CardigansPage from "../pages/CardigansPage";
-import CatalogPage from "../pages/CatalogPage";
-import DressesPage from "../pages/DressesPage";
-import ShortsPage from "../pages/ShortsPage";
-import SuitsPage from "../pages/SuitsPage";
-import TrousersPage from "../pages/TrousersPage";
-import AdminPage from "../pages/AdminPage";
+import {Route} from "react-router-dom";
+
+import MainPage from "../../pages/MainPage";
+import CardigansPage from "../../pages/CardigansPage";
+import CatalogPage from "../../pages/CatalogPage";
+import DressesPage from "../../pages/DressesPage";
+import ShortsPage from "../../pages/ShortsPage";
+import SuitsPage from "../../pages/SuitsPage";
+import TrousersPage from "../../pages/TrousersPage";
+import AdminPage from "../../pages/AdminPage";
 
 import {
     ADMIN_ROUTE,
@@ -18,11 +20,8 @@ import {
     SHORTS_ROUTE,
     SUITS_ROUTE,
     TROUSERS_ROUTE
-} from "../utils/const";
-import {userTest} from "../moc(delete-later)";
-import {Route} from "react-router-dom";
-
-export { userTest } from "../moc(delete-later)";
+} from "../../utils/const";
+import {userTest} from "../../moc(delete-later)";
 
 export const adminRoute: RouteInterface = {
     path: ADMIN_ROUTE,
