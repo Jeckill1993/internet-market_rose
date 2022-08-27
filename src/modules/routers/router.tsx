@@ -2,6 +2,8 @@ import { RouteInterface } from "../../types/router-types";
 
 import {Route} from "react-router-dom";
 
+import { adminRouter } from "./adminRouter";
+
 import MainPage from "../../pages/MainPage";
 import CardigansPage from "../../pages/CardigansPage";
 import CatalogPage from "../../pages/CatalogPage";
@@ -17,16 +19,19 @@ import {
     CATALOG_ROUTE,
     DRESSES_ROUTE,
     MAIN_ROUTE,
+    NOT_FOUND_ROUTE,
     SHORTS_ROUTE,
     SUITS_ROUTE,
     TROUSERS_ROUTE
 } from "../../utils/const";
 import {userTest} from "../../moc(delete-later)";
+import NotFound from "../../components/Content/NotFound";
 
 export const adminRoute: RouteInterface = {
     path: ADMIN_ROUTE,
     page: <AdminPage/>,
     role: 'admin',
+    nestedRoutes: adminRouter,
 }
 export const mainRoute: RouteInterface = {
     path: MAIN_ROUTE,
@@ -56,9 +61,14 @@ export const trousersRoute: RouteInterface = {
     path: TROUSERS_ROUTE,
     page: <TrousersPage/>,
 }
+export const notFoundPageRoute: RouteInterface = {
+    path: NOT_FOUND_ROUTE,
+    page: <NotFound/>,
+}
 
 const routes: RouteInterface[] = [
-    adminRoute, mainRoute, cardigansRoute, catalogRoute, dressesRoute, shortsRoute, suitsRoute, trousersRoute
+    adminRoute, mainRoute, cardigansRoute, catalogRoute, dressesRoute, shortsRoute, suitsRoute, trousersRoute,
+    notFoundPageRoute
 ]
 
 export const router = routes.map((route: RouteInterface) => {
@@ -66,5 +76,7 @@ export const router = routes.map((route: RouteInterface) => {
 
     if (role && role !== userTest.role) return;
 
-    return <Route key={path} path={path} element={page}/>;
+    return <Route key={path} path={path} element={page}>
+        { route.nestedRoutes ? route.nestedRoutes : '' }
+    </Route>;
 })

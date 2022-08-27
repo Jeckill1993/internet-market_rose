@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {PanelItemInterface, PanelSubItemInterface} from "../../../../types/admin-type";
+import {Link} from "react-router-dom";
 
 interface PanelSubItemProps {
     panelSubItem: PanelSubItemInterface,
@@ -7,9 +8,9 @@ interface PanelSubItemProps {
 
 const PanelSubItem:FC<PanelSubItemProps> = ({ panelSubItem }) => {
     return (
-        <div>
+        <Link to={panelSubItem.path}>
             { panelSubItem.title }
-        </div>
+        </Link>
     );
 };
 

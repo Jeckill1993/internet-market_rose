@@ -1,0 +1,26 @@
+
+.panelItem {
+    padding: 10px 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.title {
+    margin-left: 10px;
+}

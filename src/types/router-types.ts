@@ -5,4 +5,5 @@ export interface RouteInterface {
     page: React.ReactNode,
     role?: string,
     id?: string,
+    nestedRoutes?: React.ReactNode[],
 }
