@@ -10,10 +10,18 @@ import {
     TROUSERS_ROUTE
 } from "../../utils/const";
 
+import classes from './Header.module.css';
+
 const Header = () => {
     return (
-        <header>
-            <div className="wrapper">
+        <header className={classes.header}>
+            <div className={classes.flag}>
+                <div className="row">
+                    <div className={classes.flag_blue}></div>
+                    <div className={classes.flag_yellow}></div>
+                </div>
+            </div>
+            <div className="wrapper wrapper_max">
                 <div className="row">
                     <div className="language">EN</div>
                     <div className="logo">
@@ -25,13 +33,13 @@ const Header = () => {
                         <div className="basketLink">BasketLink</div>
                     </div>
                 </div>
-                <nav className="menu">
-                    <Link to={ CARDIGANS_ROUTE }>Cardigans</Link>
-                    <Link to={ DRESSES_ROUTE }>Dresses</Link>
-                    <Link to={ SHORTS_ROUTE }>Shorts</Link>
-                    <Link to={ SUITS_ROUTE }>Suits</Link>
-                    <Link to={ TROUSERS_ROUTE }>Trousers</Link>
-                    <Link to={ CATALOG_ROUTE }>Catalog</Link>
+                <nav className={classes.menu}>
+                    <Link to={ CARDIGANS_ROUTE } className={classes.menu_link}>Cardigans</Link>
+                    <Link to={ DRESSES_ROUTE } className={classes.menu_link}>Dresses</Link>
+                    <Link to={ SHORTS_ROUTE } className={classes.menu_link}>Shorts</Link>
+                    <Link to={ SUITS_ROUTE } className={classes.menu_link}>Suits</Link>
+                    <Link to={ TROUSERS_ROUTE } className={classes.menu_link}>Trousers</Link>
+                    <Link to={ CATALOG_ROUTE } className={classes.menu_link}>Catalog</Link>
                 </nav>
             </div>
         </header>

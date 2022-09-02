@@ -2,8 +2,11 @@ import React from 'react';
 import {BrowserRouter, Routes} from "react-router-dom";
 import { router } from "./modules/routers/router";
 
+import './styles/reset.css';
+import './styles/global.css';
+
 function App() {
-    console.log(router);
+
   return (
     <BrowserRouter>
       <Routes>
