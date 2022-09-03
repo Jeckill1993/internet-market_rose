@@ -1,0 +1,30 @@
+
+.board {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.board_item {
+    width: 30%;
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo_link {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.modal {
+    margin-left: 25px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

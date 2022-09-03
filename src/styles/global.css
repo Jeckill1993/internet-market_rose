@@ -20,7 +20,7 @@ input, select, textarea, button, a {
 .wrapper {
     width: 100%;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 15px;
 }
 .wrapper_min {
     max-width: 1450px;
@@ -45,4 +45,33 @@ input, select, textarea, button, a {
 }
 .row_right {
     justify-content: right;
+}
+.row_space_between {
+    justify-content: space-between;
+}
+.row_space_around {
+    justify-content: space-around;
+}
+
+
+@media screen and (min-width: 576px) {
+    .wrapper {
+        padding: 0 25px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .wrapper {
+        padding: 0 35px;
+    }
+}
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        padding: 0 50px;
+    }
+}
+@media screen and (min-width: 1400px) {
+
 }
