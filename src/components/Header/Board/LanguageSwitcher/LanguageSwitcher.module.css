@@ -1,11 +1,26 @@
+.board_item {
+    width: 30%;
+    position: relative;
+}
+
 .language {
     position: relative;
 }
 
-.language:after {
+.language_btn {
+    width: 32px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.language_btn:after {
     content: '';
     display: block;
-    top: 100%;
+    position: absolute;
+    top: calc(100% + 4px);
     left: 0;
     width: 0;
     height: 1px;
@@ -13,15 +28,8 @@
     transition: 0.8s;
 }
 
-.language:hover:after {
+.language_btn:hover:after {
     width: 100%;
-}
-
-.language_btn {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .language_btn_icon {
