@@ -2,8 +2,39 @@
     position: relative;
 }
 
+.language:after {
+    content: '';
+    display: block;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.8s;
+}
+
+.language:hover:after {
+    width: 100%;
+}
+
 .language_btn {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language_btn_icon {
+    margin-left: 4px;
+    width: 6px;
+    height: 6px;
+    background: url("../../../../assets/images/global/icon-arrow-language.png") no-repeat center;
+    background-size: contain;
+    transition: all 0.4s;
+}
+
+.language_btn_icon.isOpened {
+    transform: rotate(180deg);
 }
 
 .language_list {
@@ -26,10 +57,12 @@
     content: '';
     display: block;
     width: 20px;
-    height: 20px;
+    height: 15px;
     position: absolute;
-    top: -20px;
+    top: -15px;
     left: calc(50% - 10px);
+    background: url("../../../../assets/images/global/icon-triangle-white.png") no-repeat center;
+    background-size: cover;
 }
 
 .language_list.isOpened {

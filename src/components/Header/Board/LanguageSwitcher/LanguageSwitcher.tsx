@@ -9,6 +9,11 @@ const LanguageSwitcher = () => {
         setIsOpen(!isOpen);
     }
 
+    const changeHandler = (chosenLanguage: string):void => {
+        setLanguage(chosenLanguage);
+        setIsOpen(false);
+    }
+
     return (
         <div className={[classes.board_item, classes.language].join(' ')}>
             <div className={classes.language_btn} onClick={ clickHandler }>
@@ -16,9 +21,9 @@ const LanguageSwitcher = () => {
                 <span className={[classes.language_btn_icon, isOpen ? classes.isOpened : ''].join(' ')}></span>
             </div>
             <div className={[classes.language_list, isOpen ? classes.isOpened : ''].join(' ')}>
-                <p className={classes.language_list_item}>UA</p>
-                <p className={classes.language_list_item}>RU</p>
-                <p className={classes.language_list_item}>EN</p>
+                <p className={classes.language_list_item} onClick={() => { changeHandler('UA') }}>UA</p>
+                <p className={classes.language_list_item} onClick={() => { changeHandler('RU') }}>RU</p>
+                <p className={classes.language_list_item} onClick={() => { changeHandler('EN') }}>EN</p>
             </div>
         </div>
     );
