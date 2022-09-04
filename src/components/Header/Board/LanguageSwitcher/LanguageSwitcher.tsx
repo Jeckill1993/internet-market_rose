@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 import classes from "./LanguageSwitcher.module.css";
+import {useDispatch, useSelector} from "react-redux";
+import {BoardStateTypes} from "../../../../types/board-state-types";
+import {chooseLanguageAction} from "../../../../redux/reducers/boardSettingReducer";
 
 const LanguageSwitcher = () => {
-    const [language, setLanguage] = useState<string>('UA');
+    const dispatch = useDispatch();
+    const { language } = useSelector((state: any):BoardStateTypes => state.boardSettings);
+
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const clickHandler = ():void => {
@@ -10,7 +15,7 @@ const LanguageSwitcher = () => {
     }
 
     const changeHandler = (chosenLanguage: string):void => {
-        setLanguage(chosenLanguage);
+        dispatch(chooseLanguageAction(chosenLanguage));
         setIsOpen(false);
     }
 

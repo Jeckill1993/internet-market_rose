@@ -5,8 +5,17 @@ import {MAIN_ROUTE} from "../../../utils/const";
 
 import classes from "./Board.module.css";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
+import {useDispatch} from "react-redux";
+import {openModalAction} from "../../../redux/reducers/modalReducer";
 
 const Board = () => {
+
+    const dispatch = useDispatch();
+
+    const clickLinkHandler = (modalTemplate: string): void => {
+        dispatch(openModalAction(modalTemplate));
+    }
+
     return (
         <div className={classes.board}>
             <div className="wrapper wrapper_max">
@@ -17,7 +26,8 @@ const Board = () => {
                     </div>
                     <div className={[classes.board_item].join(' ')}>
                         <div className="row row_right">
-                            <div className={[classes.modal, classes.modal_search].join(' ')}>
+                            <div className={[classes.modal, classes.modal_search].join(' ')}
+                                 onClick={() => { clickLinkHandler('searchModal') }}>
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                      width="24pt" height="24pt" viewBox="0 0 24.000000 24.000000"
                                      preserveAspectRatio="xMidYMid meet">
@@ -30,7 +40,8 @@ const Board = () => {
                                     </g>
                                 </svg>
                             </div>
-                            <div className={[classes.modal, classes.modal_favorites].join(' ')}>
+                            <div className={[classes.modal, classes.modal_favorites].join(' ')}
+                                 onClick={() => { clickLinkHandler('favoritesModal') }}>
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                      width="18.000000pt" height="24.000000pt" viewBox="0 0 18 24">
                                     <g transform="translate(0,24) scale(0.100000,-0.100000)"
@@ -42,7 +53,8 @@ c54 -52 58 -46 55 86 l-3 117 -80 3 c-45 1 -84 0 -88 -4z m161 -119 l3 -110
                                     </g>
                                 </svg>
                             </div>
-                            <div className={[classes.modal, classes.modal_basket].join(' ')}>
+                            <div className={[classes.modal, classes.modal_basket].join(' ')}
+                                 onClick={() => { clickLinkHandler('basketModal') }}>
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                      width="24.000000pt" height="27.000000pt" viewBox="0 0 24.000000 27.000000"
                                      preserveAspectRatio="xMidYMid meet">

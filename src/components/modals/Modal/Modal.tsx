@@ -4,21 +4,20 @@ import classes from './Modal.module.css';
 import SearchModal from "../SearchModal/SearchModal";
 import FavoritesModal from "../FavoritesModal/FavoritesModal";
 import BasketModal from "../BasketModal/BasketModal";
+import {useDispatch, useSelector} from "react-redux";
+import {ModalStatesTypes} from "../../../types/modal-states-types";
+import {closeModalAction} from "../../../redux/reducers/modalReducer";
 
-interface ModalProps {
-    modalTemplateName: string | null;
-    isOpened: boolean;
-    setIsOpenModal: Dispatch<SetStateAction<boolean>>,
-    setModalTemplateName: Dispatch<SetStateAction<string>>,
-
-}
+interface ModalProps {}
 
 const Modal:FC<ModalProps> = (props) => {
-    const { modalTemplateName, isOpened, setIsOpenModal, setModalTemplateName } = props;
+    const dispatch = useDispatch();
+    const modals = useSelector((state: any): ModalStatesTypes => state.modals);
+
+    const { isOpened, openedModalComponent } = modals;
 
     const clickHandler = () => {
-        setIsOpenModal(!isOpened);
-        setModalTemplateName('');
+        dispatch(closeModalAction());
     }
 
     const modalTemplate = (modalTemplateName: string | null, isOpened: boolean): React.ReactNode | null => {
@@ -44,7 +43,7 @@ const Modal:FC<ModalProps> = (props) => {
     return (
         <div className={classes.modal}>
             <div className={classes.modal_overlay} onClick={clickHandler}></div>
-            { modalTemplate(modalTemplateName, isOpened) }
+            { modalTemplate(openedModalComponent, isOpened) }
         </div>
     );
 };

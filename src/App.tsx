@@ -8,16 +8,12 @@ import Modal from "./components/modals/Modal/Modal";
 
 function App() {
 
-    const [modalTemplateName, setModalTemplateName] = useState<string>('');
-    const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
-
     return (
         <BrowserRouter>
             <Routes>
                 {router}
             </Routes>
-            <Modal isOpened={isOpenModal} modalTemplateName={modalTemplateName}
-                   setIsOpenModal = {setIsOpenModal} setModalTemplateName={setModalTemplateName}/>
+            <Modal/>
         </BrowserRouter>
     );
 }
