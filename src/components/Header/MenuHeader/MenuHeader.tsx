@@ -13,14 +13,26 @@ import {
 const MenuHeader = () => {
     return (
         <nav className={classes.menu}>
-            <div className="wrapper wrapper_max">
+            <div className="wrapper wrapper_medium">
                 <div className={classes.menu_navigation}>
-                    <Link to={ CARDIGANS_ROUTE } className={classes.menu_link}>Cardigans</Link>
-                    <Link to={ DRESSES_ROUTE } className={classes.menu_link}>Dresses</Link>
-                    <Link to={ SHORTS_ROUTE } className={classes.menu_link}>Shorts</Link>
-                    <Link to={ SUITS_ROUTE } className={classes.menu_link}>Suits</Link>
-                    <Link to={ TROUSERS_ROUTE } className={classes.menu_link}>Trousers</Link>
-                    <Link to={ CATALOG_ROUTE } className={classes.menu_link}>Catalog</Link>
+                    <Link to={ CARDIGANS_ROUTE } className={classes.menu_link}>
+                        <span className={classes.menu_link__text}>Cardigans</span>
+                    </Link>
+                    <Link to={ DRESSES_ROUTE } className={classes.menu_link}>
+                        <span className={classes.menu_link__text}>Dresses</span>
+                    </Link>
+                    <Link to={ SHORTS_ROUTE } className={classes.menu_link}>
+                        <span className={classes.menu_link__text}>Shorts</span>
+                    </Link>
+                    <Link to={ SUITS_ROUTE } className={classes.menu_link}>
+                        <span className={classes.menu_link__text}>Suits</span>
+                    </Link>
+                    <Link to={ TROUSERS_ROUTE } className={classes.menu_link}>
+                        <span className={classes.menu_link__text}>Trousers</span>
+                    </Link>
+                    <Link to={ CATALOG_ROUTE } className={classes.menu_link}>
+                        <span className={classes.menu_link__text}>Catalog</span>
+                    </Link>
                 </div>
             </div>
         </nav>
