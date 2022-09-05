@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./Menu.module.css";
+import classes from "./MenuHeader.module.css";
 import {Link} from "react-router-dom";
 import {
     CARDIGANS_ROUTE,
@@ -10,7 +10,7 @@ import {
     TROUSERS_ROUTE
 } from "../../../utils/const";
 
-const Menu = () => {
+const MenuHeader = () => {
     return (
         <nav className={classes.menu}>
             <div className="wrapper wrapper_max">
@@ -27,4 +27,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default MenuHeader;

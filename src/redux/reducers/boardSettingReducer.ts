@@ -8,6 +8,7 @@ export const chooseLanguageAction = (language: string): ChooseLanguageActionType
 }
 
 const initialState: BoardStateTypes = {
+    availableLanguages: ['UA', 'EN'],
     language: 'UA',
 }
 

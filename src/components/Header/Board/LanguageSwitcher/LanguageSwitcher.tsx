@@ -6,14 +6,13 @@ import {chooseLanguageAction} from "../../../../redux/reducers/boardSettingReduc
 
 const LanguageSwitcher = () => {
     const dispatch = useDispatch();
-    const { language } = useSelector((state: any):BoardStateTypes => state.boardSettings);
+    const { availableLanguages, language } = useSelector((state: any):BoardStateTypes => state.boardSettings);
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const clickHandler = ():void => {
         setIsOpen(!isOpen);
     }
-
     const changeHandler = (chosenLanguage: string):void => {
         dispatch(chooseLanguageAction(chosenLanguage));
         setIsOpen(false);
@@ -26,9 +25,10 @@ const LanguageSwitcher = () => {
                 <span className={[classes.language_btn_icon, isOpen ? classes.isOpened : ''].join(' ')}></span>
             </div>
             <div className={[classes.language_list, isOpen ? classes.isOpened : ''].join(' ')}>
-                <p className={classes.language_list_item} onClick={() => { changeHandler('UA') }}>UA</p>
-                <p className={classes.language_list_item} onClick={() => { changeHandler('RU') }}>RU</p>
-                <p className={classes.language_list_item} onClick={() => { changeHandler('EN') }}>EN</p>
+                { availableLanguages.map((lang) =>
+                    <p key={lang} className={classes.language_list_item}
+                       onClick={() => { changeHandler(lang) }}>{ lang }</p>
+                ) }
             </div>
         </div>
     );

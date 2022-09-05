@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Header.module.css';
-import Menu from "./Menu/Menu";
+import MenuHeader from "./MenuHeader/MenuHeader";
 import Board from "./Board/Board";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
                 </div>
             </div>
             <Board/>
-            <Menu/>
+            <MenuHeader/>
         </header>
     );
 };

@@ -1,9 +1,10 @@
 
 export interface BoardStateTypes {
-    language: string
+    language: string;
+    availableLanguages: string[];
 }
 
 export interface ChooseLanguageActionType {
-    type: 'CHOOSE_LANGUAGE_ACTION',
-    language: string
+    type: 'CHOOSE_LANGUAGE_ACTION';
+    language: string;
 }
