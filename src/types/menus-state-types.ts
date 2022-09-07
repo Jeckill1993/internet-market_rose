@@ -32,3 +32,16 @@ export interface MenuSubItemType {
     name: string;
     link: string;
 }
+
+/* ACTIONS */
+export interface updateHeaderMenuActionType {
+    type: 'UPDATE_HEADER_MENU_ACTION';
+    categories: MenuItemType[];
+    isVisible: boolean;
+}
+
+export interface updateFooterMenuActionType {
+    type: 'UPDATE_FOOTER_MENU_ACTION';
+    categories: MenuItemType[];
+    isVisible: boolean;
+}

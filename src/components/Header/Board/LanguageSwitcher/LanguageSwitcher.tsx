@@ -3,10 +3,11 @@ import classes from "./LanguageSwitcher.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {BoardStateTypes} from "../../../../types/board-state-types";
 import {chooseLanguageAction} from "../../../../redux/reducers/boardSettingReducer";
+import {AppDispatch, RootState} from "../../../../redux/store";
 
 const LanguageSwitcher = () => {
-    const dispatch = useDispatch();
-    const { availableLanguages, language } = useSelector((state: any):BoardStateTypes => state.boardSettings);
+    const dispatch = useDispatch<AppDispatch>();
+    const { availableLanguages, language } = useSelector((state: RootState):BoardStateTypes => state.boardSettings);
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 

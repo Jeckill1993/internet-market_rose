@@ -1,4 +1,9 @@
-import {MenusStateTypes} from "../../types/menus-state-types";
+import {
+    MenuHeaderType,
+    MenusStateTypes,
+    updateFooterMenuActionType,
+    updateHeaderMenuActionType
+} from "../../types/menus-state-types";
 import {
     CARDIGANS_ROUTE,
     CATALOG_ROUTE,
@@ -7,6 +12,25 @@ import {
     SUITS_ROUTE,
     TROUSERS_ROUTE
 } from "../../utils/const";
+
+
+export const updateHeaderMenuAction = ({ isVisible, categories }: MenuHeaderType): updateHeaderMenuActionType => {
+    return {
+        type: 'UPDATE_HEADER_MENU_ACTION',
+        isVisible,
+        categories,
+    }
+}
+
+export const updateFooterMenuAction = ({ isVisible, categories }: MenuHeaderType): updateFooterMenuActionType => {
+    return {
+        type: 'UPDATE_FOOTER_MENU_ACTION',
+        isVisible,
+        categories,
+    }
+}
+
+type Action = updateHeaderMenuActionType | updateFooterMenuActionType;
 
 
 const initialState: MenusStateTypes = {
@@ -101,7 +125,7 @@ const initialState: MenusStateTypes = {
     },
 }
 
-function menusReducer (state = initialState, action: any ): MenusStateTypes {
+function menusReducer (state = initialState, action: Action ): MenusStateTypes {
     switch (action.type) {
         default:
             return state;

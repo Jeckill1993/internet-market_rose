@@ -7,12 +7,13 @@ import BasketModal from "../BasketModal/BasketModal";
 import {useDispatch, useSelector} from "react-redux";
 import {ModalStatesTypes} from "../../../types/modal-states-types";
 import {closeModalAction} from "../../../redux/reducers/modalReducer";
+import {AppDispatch, RootState} from "../../../redux/store";
 
 interface ModalProps {}
 
 const Modal:FC<ModalProps> = (props) => {
-    const dispatch = useDispatch();
-    const modals = useSelector((state: any): ModalStatesTypes => state.modals);
+    const dispatch = useDispatch<AppDispatch>();
+    const modals = useSelector((state: RootState): ModalStatesTypes => state.modals);
 
     const { isOpened, openedModalComponent } = modals;
 

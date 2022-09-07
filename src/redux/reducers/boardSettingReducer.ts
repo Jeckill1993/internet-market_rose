@@ -12,7 +12,7 @@ const initialState: BoardStateTypes = {
     language: 'UA',
 }
 
-function boardSettingReducer (state = initialState, action: any ): BoardStateTypes {
+function boardSettingReducer (state = initialState, action: ChooseLanguageActionType ): BoardStateTypes {
     switch (action.type) {
         case 'CHOOSE_LANGUAGE_ACTION':
             return {

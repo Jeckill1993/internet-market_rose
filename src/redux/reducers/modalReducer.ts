@@ -12,13 +12,15 @@ export const closeModalAction = (): CloseModalActionType => {
     }
 }
 
+type Action = OpenModalActionType | CloseModalActionType;
+
 
 const initialState: ModalStatesTypes = {
     isOpened: false,
     openedModalComponent: '',
 }
 
-function modalReducer (state = initialState, action: any): ModalStatesTypes {
+function modalReducer (state = initialState, action: Action): ModalStatesTypes {
     switch (action.type) {
         case 'OPEN_MODAL_ACTION':
             return {
