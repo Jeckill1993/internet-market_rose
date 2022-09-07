@@ -42,7 +42,7 @@ const Modal:FC<ModalProps> = (props) => {
     }
 
     return (
-        <div className={classes.modal}>
+        <div className={[classes.modal, isOpened ? classes.isOpen : ''].join(' ')}>
             <div className={classes.modal_overlay} onClick={clickHandler}></div>
             { modalTemplate(openedModalComponent, isOpened) }
         </div>

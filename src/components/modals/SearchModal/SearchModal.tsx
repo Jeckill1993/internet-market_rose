@@ -8,9 +8,11 @@ interface SearchModalProps {
 
 const SearchModal:FC<SearchModalProps> = ({ clickHandler }) => {
     return (
-        <div>
-            SearchModal
-            <div onClick={ clickHandler }></div>
+        <div className={classes.modal_content}>
+            <div className={classes.modal_fieldset}>
+                <input type='text' className={classes.modal_field}></input>
+            </div>
+            <div className={classes.modal_close} onClick={ clickHandler }></div>
         </div>
     );
 };
