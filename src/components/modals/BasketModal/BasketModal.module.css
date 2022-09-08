@@ -3,7 +3,7 @@
     width: 100%;
     position: relative;
     max-width: 560px;
-    height: 2000px;
+    height: auto;
     background-color: #ffffff;
     box-shadow: 0 10px 15px rgb(116 125 132 / 0.2);
     padding: 40px;
