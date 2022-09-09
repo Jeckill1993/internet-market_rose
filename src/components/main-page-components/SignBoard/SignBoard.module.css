@@ -1,0 +1,53 @@
+
+.signboard_content {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.signboard_content__bg {
+    display: block;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    border-style: solid;
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.signboard_content__bg_1 {
+    background-image: url("../../../assets/images/main-page/img-signboard-1.png");
+}
+.signboard_content__bg_2 {
+    background-image: url("../../../assets/images/main-page/img-signboard-2.png");
+}
+
+.signboard_link {
+    position: relative;
+    z-index: 2;
+}
+
+.signboard_link__title {
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.signboard_link__text {
+    display: block;
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #ffffff;
+}
