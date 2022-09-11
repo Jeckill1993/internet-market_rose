@@ -19,7 +19,7 @@ const Board = () => {
     return (
         <div className={classes.board}>
             <div className="wrapper wrapper_max">
-                <div className="row row_space_between">
+                <div className="row row_space-between">
                     <LanguageSwitcher/>
                     <div className={[classes.board_item, classes.logo].join(' ')}>
                         <Link to={MAIN_ROUTE} className={classes.logo_link}>ROZE</Link>

@@ -31,3 +31,4 @@ export const ADMIN_NOVAPOSHTA_ROUTE = 'delivery/nova-poshta';
 export const ADMIN_SYSTEM_ROUTE = 'system';
 export const ADMIN_SETTINGS_ROUTE = 'system/settings';
 export const ADMIN_LOCALIZATION_ROUTE = 'clients/localization';
+export const ADMIN_PROFILE_ROUTE = 'profile';

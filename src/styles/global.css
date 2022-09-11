@@ -46,10 +46,10 @@ input, select, textarea, button, a {
 .row_right {
     justify-content: right;
 }
-.row_space_between {
+.row_space-between {
     justify-content: space-between;
 }
-.row_space_around {
+.row_space-around {
     justify-content: space-around;
 }
 

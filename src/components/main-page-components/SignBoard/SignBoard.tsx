@@ -16,8 +16,6 @@ const SignBoard = () => {
                     modules={[Lazy, A11y]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
                 >
                     <SwiperSlide>
                         <div className={classes.signboard_content}>

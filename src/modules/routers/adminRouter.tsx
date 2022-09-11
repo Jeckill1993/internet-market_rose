@@ -32,7 +32,7 @@ import {
     ADMIN_NOVAPOSHTA_ROUTE,
     ADMIN_SYSTEM_ROUTE,
     ADMIN_SETTINGS_ROUTE,
-    ADMIN_LOCALIZATION_ROUTE, NOT_FOUND_ROUTE
+    ADMIN_LOCALIZATION_ROUTE, NOT_FOUND_ROUTE, ADMIN_PROFILE_ROUTE
 } from "../../utils/const";
 
 import AdminDashboard from "../../components/admin-components/AdminDashboard/AdminDashboard";
@@ -57,6 +57,7 @@ import AdminSystem from "../../components/admin-components/AdminSystem/AdminSyst
 import AdminSettings from "../../components/admin-components/AdminSystem/AdminSettings/AdminSettings";
 import AdminLocalization from "../../components/admin-components/AdminSystem/AdminLocalization/AdminLocalization";
 import NotFound from "../../components/Content/NotFound";
+import AdminProfile from "../../components/admin-components/AdminProfile/AdminProfile";
 
 export { userTest } from "../../moc(delete-later)";
 
@@ -144,6 +145,10 @@ export const adminLocalizationRoute: RouteInterface = {
     path: ADMIN_LOCALIZATION_ROUTE,
     page: <AdminLocalization/>,
 }
+export const adminProfileRoute: RouteInterface = {
+    path: ADMIN_PROFILE_ROUTE,
+    page: <AdminProfile/>,
+}
 export const notFoundPageRoute: RouteInterface = {
     path: NOT_FOUND_ROUTE,
     page: <NotFound/>,
@@ -154,7 +159,7 @@ const routes: RouteInterface[] = [
     adminAttributesRoute, adminMakersRoute, adminDownloadsRoute, adminReviewsRoute, adminArticlesRoute,
     adminSalesRoute, adminOrdersRoute, adminReturnsRoute, adminReturnsRoute, adminClientsRoute,
     adminClientsListRoute, adminClientsGroupsRoute, adminDeliveryRoute, adminNovaPoshtaRoute, adminSystemRoute,
-    adminSettingsRoute, adminLocalizationRoute, notFoundPageRoute
+    adminSettingsRoute, adminLocalizationRoute, adminProfileRoute, notFoundPageRoute
 ]
 
 export const adminRouter = routes.map((route: RouteInterface) => {

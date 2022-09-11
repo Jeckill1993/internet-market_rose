@@ -1,6 +1,8 @@
 
 .panelItem {
     padding: 10px 20px;
+    border-bottom: 1px solid #2b3642;
+    color: #b3cbdd;
 }
 
 .row {

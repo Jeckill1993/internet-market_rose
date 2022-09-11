@@ -33,6 +33,8 @@ import IconClients from "../../../assets/images/admin/icon-clients-admin.jpg";
 import IconDelivery from "../../../assets/images/admin/icon-delivery-admin.jpg";
 import IconSettings from "../../../assets/images/admin/icon-settings-admin.jpg";
 
+import classes from './AdminSidebar.module.css';
+
 import {
     ADMIN_ARTICLES_ROUTE,
     ADMIN_ATTRIBUTES_ROUTE,
@@ -198,7 +200,7 @@ const AdminSidebar = () => {
     const renderItem = (item: PanelItemInterface) => <PanelItem key={item.id} panelItem={item} />
 
     return (
-        <div>
+        <div className={classes.sidebar}>
             <AdminList items={panelComponents} renderItem={renderItem}/>
         </div>
     );
