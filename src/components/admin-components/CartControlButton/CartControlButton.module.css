@@ -1,0 +1,42 @@
+.control-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-button_save,
+.control-button_cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 13px;
+    border-radius: 3px;
+    touch-action: manipulation;
+    position: relative;
+    transition: 0.4s;
+}
+
+.control-button_save {
+    margin-right: 4px;
+    color: #fff;
+    background-color: #1e91cf;
+    border-color: #197bb0;
+}
+
+.control-button_save:hover {
+    background-color: #1872a2;
+    border-color: #12567a;
+}
+
+.control-button_cancel {
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.control-button_cancel:hover {
+    background-color: #e6e6e6;
+    border-color: #bebebe;
+}
