@@ -8,9 +8,11 @@ import CartStatus from "../CartStatus/CartStatus";
 const AdminProfile = () => {
     return (
         <div className={classes.profile}>
-            <div className="row">
-                <h1 className={classes.profile__title}>Profile</h1>
-                <CartControlButton />
+            <div className={classes['profile-title']}>
+                <div className="row row_space-between">
+                    <h1 className={classes['profile-title__title']}>Profile</h1>
+                    <CartControlButton />
+                </div>
             </div>
             <CartStatus />
             <ProfileForm />
