@@ -8,7 +8,7 @@ const AdminPage = () => {
     return (
         <div>
             <AdminHeader/>
-            <div className="row">
+            <div className="row row_top">
                 <AdminSidebar/>
                 <AdminContent/>
             </div>

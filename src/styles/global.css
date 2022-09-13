@@ -64,6 +64,12 @@ svg, img {
 .row_space-around {
     justify-content: space-around;
 }
+.row_top {
+    align-items: flex-start;
+}
+.row_bottom {
+    align-items: flex-end;
+}
 
 .main {
     margin-top: 129px;
